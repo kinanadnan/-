@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>سباق السيارات الجماعي</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hud">
+      <h1>🏁 سباق السيارات الجماعي</h1>
+      <p>استخدم أسهم لوحة المفاتيح أو أزرار التحكم لتحريك سيارتك.</p>
+    </header>
+    <main>
+      <canvas id="game" width="900" height="600" aria-label="ساحة السباق"></canvas>
+      <div class="touch-controls" aria-hidden="true">
+        <div class="control-row">
+          <button class="control-btn" data-action="accelerate">⬆️</button>
+        </div>
+        <div class="control-row">
+          <button class="control-btn" data-action="left">⬅️</button>
+          <button class="control-btn" data-action="brake">⏹️</button>
+          <button class="control-btn" data-action="right">➡️</button>
+        </div>
+        <div class="control-row">
+          <button class="control-btn" data-action="reverse">⬇️</button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>شارك الرابط مع أصدقائك للانضمام!</p>
+    </footer>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module" src="game.js"></script>
+  </body>
+</html>
